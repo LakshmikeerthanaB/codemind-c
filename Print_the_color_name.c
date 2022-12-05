@@ -1,8 +1,6 @@
 #include <stdio.h>
-int main()
+void mainl(int ch)
 {
-     char ch;
-     scanf("%c",&ch);
      if(ch=='r' || ch=='R')
      {
           printf("RED");
@@ -19,5 +17,10 @@ int main()
      {
           printf("-1");
      }
-     return 0;
+}
+int main()
+{
+     char ch;
+     scanf("%c",&ch);
+     mainl(ch);
 }
