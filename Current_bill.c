@@ -1,6 +1,9 @@
 #include<stdio.h>
-void bill(int n)
+int main()
 {
+    
+     int n;
+    scanf("%d",&n);
     float c,sc,b,tb;
     if(n<200)
     {
@@ -30,11 +33,4 @@ void bill(int n)
     }
     tb=b+sc;
     printf("%0.2f",tb);
-}
-int main()
-{
-     int n;
-    scanf("%d",&n);
-    bill(n);
-    
 }
