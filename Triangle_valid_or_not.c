@@ -1,18 +1,26 @@
 #include<stdio.h>
-void mainl(int a,int b,int c)
+int mainl(int a,int b,int c)
 {
     if(a+b>c && a+c>b && b+c>a)
     {
-        printf("Valid triangle");
+        return 1;
     }
     else
     {
-        printf("Invalid triangle");
+        return 0;
     }
 }
 int main()
 {
     int a,b,c;
     scanf("%d%d%d",&a,&b,&c);
-    mainl(a,b,c);
+    int res=mainl(a,b,c);
+    if(res==1)
+    {
+        printf("Valid triangle");
+    }
+    else if(res==0)
+    {
+        printf("Invalid triangle");
+    }
 }
