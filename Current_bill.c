@@ -1,39 +1,34 @@
 #include<stdio.h>
-float bill(int n)
+int main()
 {
-    float c,sc,b,tb;
-    if(n<200)
+    int units,uc=0;
+    scanf("%d",&units);
+    float bill,sr,tb;
+    if(units<200)
     {
-        c=1.20;
+        bill=units*1.20;
     }
-    else if(n>=200 && n<400)
+    else if(units>=200 && units<400)
     {
-        c=1.50;
+        bill=units*1.50;
     }
-    else if(n>=400 && n<600)
+    else if(units>=400 && units<600)
     {
-        c=1.80;
+        bill=units*1.80;
     }
-    else if(n>600)
+    else 
     {
-        c=2.00;
+        bill=units*2.00;
     }
-    b=n*c;
-    if(b>400)
+    if(bill>=400)
     {
-        sc=b*0.15;
+        sr=bill*0.15;
+        tb=bill+sr;
+        printf("%0.2f",tb);
     }
     else
     {
-        sc=100;
-    }
-    tb=b+sc;
-    printf("%0.2f",tb);
-    return tb;
-}
-int main()
-{
-    int n;
-    scanf("%d",&n);
-    bill(n);
+        tb=bill+100;
+        printf("%0.2f",tb);
+  }
 }
