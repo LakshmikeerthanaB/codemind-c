@@ -2,38 +2,23 @@
 #include<math.h>
 int main()
 {
-    int n,r=0,j,m=0;
+    int n,rem,rev=0,a,sa,sr,rs=0;
     scanf("%d",&n);
-    j=n;
-    while(n!=0)
+    a=n;
+    while(n>0)
     {
-        m=n%10;
-        r=r*10+m;
-        n/=10;
+        rem=n%10;
+        rev=rev*10+rem;
+        n=n/10;
     }
-    int y,b=0,c=0;
-   y=r*r;
-    while(y!=0)
+    sa=pow(a,2);
+    sr=pow(rev,2);
+    while(sr>0)
     {
-        b=y%10;
-        c=c*10+b;
-        y/=10;
+        rem=sr%10;
+        rs=rs*10+rem;
+        sr=sr/10;
     }
-    int g,i=0,k=0;
-    g=j*j;
-    /*while(j!=0)
-    {
-        i=g*10;
-    k=k*10+i;
-    g/=10;
-    
-    }*/
-    if(c==g)
-    {
-        printf("True");
-    }
-    else
-    {
-        printf("False");
-    }
+    if(sa==rs) printf("True");
+    else printf("False");
 }
