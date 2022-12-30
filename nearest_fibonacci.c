@@ -1,65 +1,24 @@
-# include<stdio.h>
-int fib(int);//decleration
+#include<stdio.h>
 int main()
 {
-    int n,f,b;
+    int a=0,b=1,c=0,n;
     scanf("%d",&n);
-    for(int i=n;;i++)
+    while(n>c)
     {
-        if(fib(i))
-        {
-            f=i;
-            break;
-        }
+        c=a+b;
+        a=b;
+        b=c;
     }
-    for(int i=n;;i--)
+    if(n-a<b-n)
     {
-        if(fib(i))
-        {
-            b=i;
-            break;
-        }
+        printf("%d ",a);
     }
-    int d1=f-n;
-    int d2=n-b;
-    if(d1>d2)
+    else if(n-a==b-n)
     {
-        printf("%d",b);
-    }
-    else if(d2>d1)
-    {
-        printf("%d",f);
-    }
-    else if(d1==d2)
-    {
-        printf("%d %d",b,f);
-    }
-}
-int fib(int n)
-{
-    int a,b,c;
-    if(n==0 || n==1)
-    {
-        printf("%d",n);
+         printf("%d %d",a,b);
     }
     else
     {
-        a=0;
-        b=1; 
-        c=a+b;
-    }
-    while(n>c)
-    {
-        a=b;
-        b=c;
-        c=a+b;
-    }
-    if(n==c)
-    {
-        return 1;
-    }
-    else 
-    {
-        return 0;
+        printf("%d",b);
     }
 }
