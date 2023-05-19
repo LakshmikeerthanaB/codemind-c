@@ -1,21 +1,25 @@
+
 #include<stdio.h>
 int main()
 {
-    int i,j,n,s=0;
+    int n,q,r,s=0;
     scanf("%d",&n);
-    while(s!=1 && s!=4)
+    q=n;
+    while(q>9)
     {
         s=0;
-        while(n>0)
+        while(q!=0)
         {
-            j=n%10;
-            s+=j*j;
-            n=n/10;
-            
+            r=q%10;
+            s=s+r*r;
+            q=q/10;
         }
-        n=s;
+        if(s>9)
+        {
+            q=s;
+        }
     }
-    if(s==1)
+    if(s==1 || s==7)
     {
         printf("True");
     }
@@ -23,4 +27,5 @@ int main()
     {
         printf("False");
     }
+    //printf("%d",s);
 }
