@@ -1,20 +1,15 @@
-
-
 #include<stdio.h>
 int main()
 {
-    int a,b=0,i,c=1,d,k;
-    scanf("%d",&a);
-    for(i=1;i<=a;i++)
+    int n,i,c,a,b;
+    scanf("%d",&n);
+    a=0;
+    b=1;
+    for(i=1;i<=n;i++)
     {
-        printf("%d ",b);
-        d=b+c;
+        printf("%d ",a);
+        c=a+b;
+        a=b;
         b=c;
-        c=d;
-        if(i%d==a)
-        {
-            k=1;
-            break;
-        }
     }
 }
