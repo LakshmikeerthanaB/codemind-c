@@ -1,36 +1,27 @@
 #include<stdio.h>
-int digicnt(int n)
-{
-    int r,k=0;
-    while(n>0)
-    {
-        r=n%10;
-        k++;
-        n=n/10;
-    }
-    return k;
-}
 int main()
 {
-    int n;
+    int n,r=0,s=0,x=0,d=0,rev=0;
     scanf("%d",&n);
-    int k=digicnt(n);
-    int x[k];
-    for(int i=k-1;i>=0;i--)
+    while(n!=0)
     {
-        x[i]=n%10;
+        s=n%10;
+        r=r*10+s;
         n=n/10;
     }
-    for(int i=0;i<k;i++)
+    while(r!=0)
     {
-        if(x[i]!=9)
+        x=r%10;
+        r=r/10;
+        if(d<1)
         {
-            x[i]=9;
-            break;
+            if(x==6)
+            {
+                x=9;
+                d=1;
+            }
         }
+        rev=rev*10+x;
     }
-    for(int i=0;i<k;i++)
-    {
-        printf("%d",x[i]);
-    }
+    printf("%d",rev);
 }
